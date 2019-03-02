@@ -21,7 +21,8 @@ Doorplast - strona główna
       <h1 style="margin-top:30px;letter-spacing:2px" class="hdark">OFERTA</h1>
       <div class="krecha"></div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{App\Text::find(2)->text}}
+
       </p>
     </section>
 
@@ -68,7 +69,22 @@ Doorplast - strona główna
 
     <section class="container" id="aktualnosci">
       <h1 style="margin-top:30px;letter-spacing:1.5px" class="hdark">AKTUALNOŚCI</h1>
-      <div class="krecha"></div>
+      <div class="krecha my-3" style="width:120px"></div>
+      <div class="row">
+
+      @foreach($news as $new)
+          <div class="col-md-4">
+
+          <p class="title">{{$new->title}}</p>
+          <div class="krecha krechapink my-2"></div>
+          <p class="text">{{$new->text}}</p>
+
+          {{-- <p class="text">{{substr($new->text,0,500).'...'}}</p> --}}
+      </div>
+
+     @endforeach
+ </div>
+
     </section>
 
 @endsection

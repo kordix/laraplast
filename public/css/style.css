@@ -141,6 +141,11 @@ transition:0.8s;
   width:80px;
 }
 
+
+.krechapink{
+    border-bottom:3px var(--mypink) solid;
+}
+
 /* h1:after{
   content:"";
   display:block;
@@ -172,4 +177,13 @@ transition:0.8s;
 
 #obrazki figure:hover{
   opacity:0.6;
+}
+
+#aktualnosci .title{
+    font-size:19px;
+    text-align:center;
+}
+
+#aktualnosci .text{
+    text-align:center !important;
 }

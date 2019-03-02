@@ -12,22 +12,19 @@
 
 </head>
 <body>
-
-
-
 <div class="container">
 <nav id="navbar" class="navbar navbar-expand-md navbar-light">
 
 <a class="navbar-brand" href="#"><img src="http://www.vetrex.slupsk.pl/wp-content/themes/vetrex/images/header_top_logo_doorplast.png" alt=""></a>
-<a class="navbar-brand" href="#">ADMINISTRACJA</a>
+<a class="navbar-brand" href="{{route('index')}}">ADMINISTRACJA</a>
 
 <div class="collapse navbar-collapse">
 <ul class="navbar-nav ml-auto" style="margin-right:20px">
-<li class="nav-item"><a href="#" class="nav-link">Strona</a></li>
+<li class="nav-item"><a href="/" class="nav-link">Strona</a></li>
 </ul>
 @guest @else
 <ul class="navbar-nav mr-auto">
-  <li class="nav-item"><a href="#" class="nav-link">Dodaj Artykuł</a> </li>
+  <li class="nav-item"><a href="{{route('main')}}" class="nav-link">Dodaj Artykuł</a> </li>
 </ul>
 @endguest
 </div>

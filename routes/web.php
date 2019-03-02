@@ -11,14 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'MainController@main')->name('main');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create', 'TextController@create')->name('create');
-Route::get('/index', 'TextController@index')->name('index');
+Route::get('/edit/{id}', 'TextController@edit')->name('edit');
+Route::get('/admin', 'TextController@index')->name('index');
 
 Route::post('/store', 'TextController@store')->name('store');
+Route::patch('/update/{id}', 'TextController@update')->name('update');
+
+Route::resource('category', 'CategoryController');
+Route::get('indexcategory', 'CategoryController@index');
