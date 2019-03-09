@@ -77,7 +77,7 @@ Doorplast - strona główna
 
           <p class="title">{{$new->title}}</p>
           <div class="krecha krechapink my-2"></div>
-          <p class="text">{{$new->text}}</p>
+          <p class="text">{{substr($new->text,0,400).'...'}}</p>
 
           {{-- <p class="text">{{substr($new->text,0,500).'...'}}</p> --}}
       </div>
@@ -87,4 +87,37 @@ Doorplast - strona główna
 
     </section>
 
+    <section>
+        <h1 style="text-align:center">Realizacje</h1>
+        <div class="krecha my-3" style="width:120px"></div>
+
+    <div class="container">
+
+            <div class="row" id="galeria">
+                <a href="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_001-193x193.jpg" data-toggle="lightbox" data-gallery="galeria"><img src="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_001-193x193.jpg" alt=""> </a>
+                <a href="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_003-193x193.jpg" data-toggle="lightbox" data-gallery="galeria"><img src="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_003-193x193.jpg" alt=""> </a>
+                 <a href="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_005-193x193.jpg" data-toggle="lightbox" data-gallery="galeria"><img src="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_007-193x193.jpg" alt=""></a>
+                 <a href="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_007-193x193.jpg" data-toggle="lightbox" data-gallery="galeria"><img src="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_009-193x193.jpg" alt=""></a>
+                 <a href="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_011-193x193.jpg" data-toggle="lightbox" data-gallery="galeria"><img src="http://www.vetrex.slupsk.pl/wp-content/uploads/2017/12/WP_20170620_011-193x193.jpg" alt=""></a>
+
+            </div>
+
+    </div>
+    </section>
+
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        console.log('FSAFASFFSD');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" defer></script>
+
+    <script defer>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                    event.preventDefault();
+                    $(this).ekkoLightbox();
+                    console.log('FDSAFDS');
+                });
+    </script>
 @endsection

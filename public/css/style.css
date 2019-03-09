@@ -1,4 +1,4 @@
-/* navbar */
+/*ogólne */
 :root{
   --mypink: #ED1846;
   --mygray: #c3cbd2;
@@ -8,10 +8,16 @@ p{
   text-align:justify;
 }
 
-.container{
 
+/*lightbox*/
+a[data-toggle="lightbox"]{
+    margin:2px;
 }
 
+
+
+
+/* navbar */
 @media(min-width:1200px){
   #navbar .container{
     /* max-width:1200px !important; */
